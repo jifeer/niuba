@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etyero.dao.DTDividendMapper">
+	<resultMap id="BaseResultMap" type="com.etyero.entity.DTDividend">
+		<result column="id" property="id" jdbcType="INTEGER" />
+		<result column="dt_dividend" property="dt_dividend" jdbcType="DECIMAL" />
+		<result column="dt_onePeopleCost" property="dt_onePeopleCost" jdbcType="DECIMAL" />
+		<result column="dt_doublePeopleCost" property="dt_doublePeopleCost" jdbcType="DECIMAL" />
+		<result column="dt_dividend_date" property="dt_dividend_date" jdbcType="VARCHAR" />
+		<result column="create_time" property="create_time" jdbcType="VARCHAR" />
+	</resultMap>
+	<select id="selectDTDividendInfoByDate" parameterType="String" resultMap="BaseResultMap">
+		select * from t_DT_dividend where dt_dividend_date between #{0,jdbcType=VARCHAR} and #{1,jdbcType=VARCHAR}
+	</select>
+	<select id="checkDTDividendInfoByDate" parameterType="String" resultMap="BaseResultMap">
+		select * from t_DT_dividend where dt_dividend_date = #{date,jdbcType=VARCHAR}
+	</select>
+ 	<insert id="insertDTDividendInfo" useGeneratedKeys="true"	parameterType="com.etyero.entity.DTDividend">
+		<selectKey resultType="int" keyProperty="id" order="AFTER">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+		insert into t_DT_dividend
+		(dt_dividend,dt_onePeopleCost,dt_doublePeopleCost,dt_dividend_date,create_time)
+		values
+		(#{dt_dividend,jdbcType=DECIMAL},#{dt_onePeopleCost,jdbcType=DECIMAL},#{dt_doublePeopleCost,jdbcType=DECIMAL},#{dt_dividend_date,jdbcType=VARCHAR},DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S'))
+	</insert>
+</mapper>

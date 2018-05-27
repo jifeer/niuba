@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+    <description>定时器管理，用于继承了QuartzJobBean或实现了接口job的定时任务配置</description>
+	<bean name="GetDTInfoTaskJob"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.etyero.timeTask.GetDTInfoTask" />
+		<property name="durability" value="true" />
+	</bean>
+	<bean name="GetDTYesterdayInfoTaskJob"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.etyero.timeTask.GetDTYesterdayInfoTask" />
+		<property name="durability" value="true" />
+	</bean>
+	<bean name="GetExchangeRankTaskJob"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.etyero.timeTask.GetExchangeRankTask" />
+		<property name="durability" value="true" />
+	</bean>
+	<bean name="GetHXCInfoTaskJob"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.etyero.timeTask.GetHXCInfoTask" />
+		<property name="durability" value="true" />
+	</bean>
+	<bean name="GetCHTInfoTaskJob"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass" value="com.etyero.timeTask.GetCHTInfoTask" />
+		<property name="durability" value="true" />
+	</bean>
+	
+	
+
+	<!-- 2、定义触发器Trigger，并将触发器与工作任务绑定 -->
+	<!-- <bean id="TimeTaskTestTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean"> 
+		<property name="jobDetail" ref="TimeTaskTestJob" /> <property name="cronExpression" 
+		value="0 */1 * * * ? *" /> </bean> -->
+	<bean id="GetDTInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetDTInfoTaskJob" />
+		<property name="cronExpression" value="0 /5 * * * ?" />
+	</bean>
+	<bean id="GetDTYesterdayInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetDTYesterdayInfoTaskJob" />
+		<property name="cronExpression" value="0 1 0 * * ?" />
+	</bean>
+	<bean id="GetExchangeRankTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetExchangeRankTaskJob" />
+		<property name="cronExpression" value="0 0 * * * ?" />
+	</bean>
+	<bean id="GetHXCInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetHXCInfoTaskJob" />
+		<property name="cronExpression" value="0 */1 * * * ?" />
+	</bean>
+	<bean id="GetCHTInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetCHTInfoTaskJob" />
+		<property name="cronExpression" value="0 0 */4 * * ?" />
+	</bean>
+
+
+
+	<!-- 3、定义调度器，并将Trigger注册到Scheduler -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="jobDetails">
+			<list>
+				<!-- <ref bean="TimeTaskTestJob" /> -->
+				<ref bean="GetDTInfoTaskJob" />
+				<ref bean="GetDTYesterdayInfoTaskJob" />
+				<ref bean="GetExchangeRankTaskJob" />
+				<ref bean="GetHXCInfoTaskJob" />
+				<ref bean="GetCHTInfoTaskJob" />
+			</list>
+		</property>
+
+		<property name="triggers">
+			<list>
+				<!-- <ref bean="TimeTaskTestTrigger" /> -->
+				<ref bean="GetDTInfoTaskTrigger" />
+				<ref bean="GetDTYesterdayInfoTaskTrigger" />
+				<ref bean="GetExchangeRankTaskTrigger" />
+				<ref bean="GetHXCInfoTaskTrigger" />
+				<ref bean="GetCHTInfoTaskTrigger" />
+			</list>
+		</property>
+ 		<property name="jobFactory">
+            <bean class="com.etyero.timeTask.JobFactory" />
+        </property>
+	</bean>
+</beans>

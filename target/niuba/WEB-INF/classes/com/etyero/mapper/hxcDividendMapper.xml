@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etyero.dao.HXCDividendMapper">
+	<resultMap id="BaseResultMap" type="com.etyero.entity.HXCDividend">
+		<result column="id" property="id" jdbcType="INTEGER" />
+		<result column="hxc_dividend" property="hxc_dividend" jdbcType="VARCHAR" />
+		<result column="create_time" property="create_time" jdbcType="VARCHAR" />
+		<result column="update_time" property="update_time" jdbcType="VARCHAR" />
+	</resultMap>
+    <select id="selectHXCInfoByCreateTime" parameterType="String" resultMap="BaseResultMap">
+		select * from t_HXC_info where DATE_FORMAT(create_time,'%Y-%m-%d')=#{create_time,jdbcType=VARCHAR} </select>
+	<insert id="insertHXCInfo" useGeneratedKeys="true"	parameterType="com.etyero.entity.HXCDividend">
+		<selectKey resultType="int" keyProperty="id" order="AFTER">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+		insert into t_HXC_info
+		(hxc_dividend,create_time,update_time)
+		values
+		(#{hxc_dividend,jdbcType=VARCHAR},DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S'),DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S'))
+	</insert>
+	<update id="updateHXCInfoByCreateTime" parameterType="com.etyero.entity.HXCDividend">
+		update t_HXC_info set
+		hxc_dividend=#{hxc_dividend,jdbcType=VARCHAR},update_time=DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S')
+		where DATE_FORMAT(create_time,'%Y-%m-%d')=#{create_time,jdbcType=VARCHAR}
+	</update>
+	<!-- <delete id="deleteBuildings"> delete from buildings where name=#{name,jdbcType=VARCHAR} 
+		</delete> -->
+</mapper>

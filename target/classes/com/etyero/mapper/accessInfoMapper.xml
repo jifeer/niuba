@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etyero.dao.AccessInfoMapper">
+	<resultMap id="BaseResultMap" type="com.etyero.entity.AccessInfo">
+		<result column="id" property="id" jdbcType="INTEGER" />
+		<result column="ip" property="ip" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="access_code" property="accessCode" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<insert id="insertAccessInfo" useGeneratedKeys="true"	parameterType="com.etyero.entity.AccessInfo">
+		<selectKey resultType="int" keyProperty="id" order="AFTER">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+		insert into t_access_info
+		(ip,address,access_code,create_time)
+		values
+		(#{ip,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR},#{accessCode,jdbcType=VARCHAR},DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S'))
+	</insert>
+
+	<!-- <delete id="deleteBuildings"> delete from buildings where name=#{name,jdbcType=VARCHAR} 
+		</delete> -->
+</mapper>

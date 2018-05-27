@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.etyero.dao.ChtMapper">
+	<resultMap id="BaseResultMap" type="com.etyero.entity.Cht">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="yesterday_info" property="yesterday_info" jdbcType="VARCHAR" />
+		<result column="dividend_histroy_BTC" property="dividend_histroy_BTC" jdbcType="VARCHAR" />
+		<result column="dividend_histroy_ETH" property="dividend_histroy_ETH" jdbcType="VARCHAR" />
+		<result column="dividend_histroy_count" property="dividend_histroy_count" jdbcType="VARCHAR" />
+		<result column="dividend_histroy_date" property="dividend_histroy_date" jdbcType="VARCHAR" />
+		<result column="create_time" property="create_time" jdbcType="VARCHAR" />
+		<result column="update_time" property="update_time" jdbcType="VARCHAR" />
+	</resultMap>
+    <select id="selectChtInfoByCreateTime" parameterType="com.etyero.entity.Cht" resultMap="BaseResultMap">
+		select * from t_cht_info where DATE_FORMAT(create_time,'%Y-%m-%d')=#{create_time,jdbcType=VARCHAR} </select>
+	<insert id="insertChtInfo" useGeneratedKeys="true"	parameterType="com.etyero.entity.Cht">
+		<selectKey resultType="int" keyProperty="id" order="AFTER">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+		insert into t_cht_info
+		(yesterday_info,dividend_histroy_BTC,dividend_histroy_ETH,dividend_histroy_count,dividend_histroy_date,create_time,update_time)
+		values
+		(#{yesterday_info,jdbcType=VARCHAR},#{dividend_histroy_BTC,jdbcType=VARCHAR},#{dividend_histroy_ETH,jdbcType=VARCHAR},#{dividend_histroy_count,jdbcType=VARCHAR},#{dividend_histroy_date,jdbcType=VARCHAR},DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S'),DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S'))
+	</insert>
+	<update id="updateChtInfoByCreateTime" parameterType="com.etyero.entity.Cht">
+		update t_cht_info set
+		yesterday_info=#{yesterday_info,jdbcType=VARCHAR},dividend_histroy_BTC=#{dividend_histroy_BTC,jdbcType=VARCHAR},dividend_histroy_ETH=#{dividend_histroy_ETH,jdbcType=VARCHAR},dividend_histroy_count=#{dividend_histroy_count,jdbcType=VARCHAR},dividend_histroy_date=#{dividend_histroy_date,jdbcType=VARCHAR},update_time=DATE_FORMAT(NOW(),'%Y-%m-%d %H:%i:%S')
+		where DATE_FORMAT(create_time,'%Y-%m-%d')=#{create_time}
+	</update>
+	<!-- <delete id="deleteBuildings"> delete from buildings where name=#{name,jdbcType=VARCHAR} 
+		</delete> -->
+</mapper>

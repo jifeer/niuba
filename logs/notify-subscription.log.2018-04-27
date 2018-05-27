@@ -1,0 +1,269 @@
+2018-04-27 18:12:33,363 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 18:12:33,504 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:12:33 CST 2018]; root of context hierarchy
+2018-04-27 18:12:33,577 - No MyBatis mapper was found in '[com.etyero.mapper]' package. Please check your configuration.
+2018-04-27 18:12:33,585 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 18:12:33,589 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 18:12:33,691 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2aceadd4] to prepare test instance [com.etyero.service.test.CodeServiceTest@24aed80c]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.etyero.service.test.CodeServiceTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.service.CodeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:384)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.service.CodeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:441)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 26 more
+2018-04-27 18:12:33,698 - Closing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:12:33 CST 2018]; root of context hierarchy
+2018-04-27 18:13:29,494 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 18:13:29,646 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:13:29 CST 2018]; root of context hierarchy
+2018-04-27 18:13:29,710 - No MyBatis mapper was found in '[com.etyero.mapper]' package. Please check your configuration.
+2018-04-27 18:13:29,717 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 18:13:29,721 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 18:13:29,816 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2aceadd4] to prepare test instance [com.etyero.service.test.CodeServiceTest@24aed80c]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.etyero.service.test.CodeServiceTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.service.CodeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:384)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.service.CodeService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:441)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 26 more
+2018-04-27 18:13:29,824 - Closing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:13:29 CST 2018]; root of context hierarchy
+2018-04-27 18:16:11,917 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 18:16:12,069 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:16:12 CST 2018]; root of context hierarchy
+2018-04-27 18:16:12,152 - No MyBatis mapper was found in '[com.etyero.mapper]' package. Please check your configuration.
+2018-04-27 18:16:12,161 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 18:16:12,165 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 18:16:12,191 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ec7ffd3] to prepare test instance [com.etyero.service.test.CodeServiceTest@5b239d7d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'CodeServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.dao.CodeMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.dao.CodeMapper] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:441)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 41 more
+2018-04-27 18:18:27,081 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 18:18:27,247 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:18:27 CST 2018]; root of context hierarchy
+2018-04-27 18:18:27,342 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 18:18:27,346 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 18:18:27,494 - Closing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:18:27 CST 2018]; root of context hierarchy
+2018-04-27 18:33:53,577 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 18:33:53,744 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:33:53 CST 2018]; root of context hierarchy
+2018-04-27 18:33:53,846 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 18:33:53,849 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 18:33:53,979 - Closing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:33:53 CST 2018]; root of context hierarchy
+2018-04-27 18:34:04,000 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 18:34:04,169 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:34:04 CST 2018]; root of context hierarchy
+2018-04-27 18:34:04,268 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 18:34:04,271 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 18:34:04,438 - Closing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:34:04 CST 2018]; root of context hierarchy
+2018-04-27 18:37:20,353 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 18:37:20,523 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:37:20 CST 2018]; root of context hierarchy
+2018-04-27 18:37:20,623 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 18:37:20,628 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 18:37:20,772 - Closing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 18:37:20 CST 2018]; root of context hierarchy
+2018-04-27 19:13:19,282 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 19:13:19,452 - Refreshing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 19:13:19 CST 2018]; root of context hierarchy
+2018-04-27 19:13:19,544 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 19:13:19,548 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 19:13:20,222 - code----com.etyero.entity.Code@4a83a74a
+2018-04-27 19:13:20,223 - code转为json
+2018-04-27 19:13:20,296 - {"code":"234567","id":1}
+2018-04-27 19:13:20,298 - Closing org.springframework.context.support.GenericApplicationContext@5622fdf: startup date [Fri Apr 27 19:13:19 CST 2018]; root of context hierarchy
+2018-04-27 20:45:01,296 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f47d241: startup date [Fri Apr 27 20:45:01 CST 2018]; root of context hierarchy
+2018-04-27 20:45:01,335 - Loading XML bean definitions from class path resource [application-spring-quartz.xml]
+2018-04-27 20:45:37,278 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f47d241: startup date [Fri Apr 27 20:45:37 CST 2018]; root of context hierarchy
+2018-04-27 20:45:37,317 - Loading XML bean definitions from class path resource [spring_data.xml]
+2018-04-27 20:46:02,735 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f47d241: startup date [Fri Apr 27 20:46:02 CST 2018]; root of context hierarchy
+2018-04-27 20:46:02,777 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-04-27 20:49:10,375 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f47d241: startup date [Fri Apr 27 20:49:10 CST 2018]; root of context hierarchy
+2018-04-27 20:49:10,421 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-04-27 20:50:00,395 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f47d241: startup date [Fri Apr 27 20:50:00 CST 2018]; root of context hierarchy
+2018-04-27 20:50:00,455 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-04-27 20:53:14,693 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 20:53:14,869 - Refreshing org.springframework.context.support.GenericApplicationContext@548e7350: startup date [Fri Apr 27 20:53:14 CST 2018]; root of context hierarchy
+2018-04-27 20:53:14,949 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 20:53:14,952 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 20:53:15,789 - code----com.etyero.entity.Code@3f191845
+2018-04-27 20:53:15,789 - code转为json
+2018-04-27 20:53:15,932 - {"code":"234567","id":1}
+2018-04-27 20:53:15,934 - Closing org.springframework.context.support.GenericApplicationContext@548e7350: startup date [Fri Apr 27 20:53:14 CST 2018]; root of context hierarchy
+2018-04-27 20:53:28,960 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f47d241: startup date [Fri Apr 27 20:53:28 CST 2018]; root of context hierarchy
+2018-04-27 20:53:28,996 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-04-27 20:55:42,830 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f47d241: startup date [Fri Apr 27 20:55:42 CST 2018]; root of context hierarchy
+2018-04-27 20:55:42,871 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-04-27 20:58:50,224 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4141d797: startup date [Fri Apr 27 20:58:50 CST 2018]; root of context hierarchy
+2018-04-27 20:58:50,260 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-04-27 20:58:50,500 - Using default implementation for ThreadExecutor
+2018-04-27 20:58:50,573 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-04-27 20:58:50,574 - Quartz Scheduler v.2.3.0 created.
+2018-04-27 20:58:50,574 - RAMJobStore initialized.
+2018-04-27 20:58:50,575 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-04-27 20:58:50,575 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-04-27 20:58:50,575 - Quartz scheduler version: 2.3.0
+2018-04-27 20:58:50,577 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6166e06f
+2018-04-27 20:58:50,599 - Starting beans in phase 2147483647
+2018-04-27 20:58:50,600 - Starting Quartz Scheduler now
+2018-04-27 20:58:50,600 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-04-27 21:42:49,955 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4141d797: startup date [Fri Apr 27 21:42:49 CST 2018]; root of context hierarchy
+2018-04-27 21:42:49,990 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-04-27 21:42:50,220 - Using default implementation for ThreadExecutor
+2018-04-27 21:42:50,232 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-04-27 21:42:50,233 - Quartz Scheduler v.2.3.0 created.
+2018-04-27 21:42:50,233 - RAMJobStore initialized.
+2018-04-27 21:42:50,234 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-04-27 21:42:50,234 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-04-27 21:42:50,234 - Quartz scheduler version: 2.3.0
+2018-04-27 21:42:50,235 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6166e06f
+2018-04-27 21:42:50,239 - Starting beans in phase 2147483647
+2018-04-27 21:42:50,240 - Starting Quartz Scheduler now
+2018-04-27 21:42:50,240 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-04-27 21:43:01,894 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 21:43:02,072 - Refreshing org.springframework.context.support.GenericApplicationContext@53b32d7: startup date [Fri Apr 27 21:43:02 CST 2018]; root of context hierarchy
+2018-04-27 21:43:02,163 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 21:43:02,167 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 21:43:02,758 - code----com.etyero.entity.Code@2d901eb0
+2018-04-27 21:43:02,758 - code转为json
+2018-04-27 21:43:02,825 - {"code":"234567","id":1}
+2018-04-27 21:43:02,827 - Closing org.springframework.context.support.GenericApplicationContext@53b32d7: startup date [Fri Apr 27 21:43:02 CST 2018]; root of context hierarchy
+2018-04-27 21:52:44,335 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 21:52:44,505 - Refreshing org.springframework.context.support.GenericApplicationContext@53b32d7: startup date [Fri Apr 27 21:52:44 CST 2018]; root of context hierarchy
+2018-04-27 21:52:44,583 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 21:52:44,587 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 21:52:45,231 - code----com.etyero.entity.Code@79e4c792
+2018-04-27 21:52:45,231 - code转为json
+2018-04-27 21:52:45,302 - {"code":"234567","id":1}
+2018-04-27 21:52:45,305 - Closing org.springframework.context.support.GenericApplicationContext@53b32d7: startup date [Fri Apr 27 21:52:44 CST 2018]; root of context hierarchy
+2018-04-27 22:11:49,619 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-27 22:11:49,859 - Refreshing org.springframework.context.support.GenericApplicationContext@53b32d7: startup date [Fri Apr 27 22:11:49 CST 2018]; root of context hierarchy
+2018-04-27 22:11:49,981 - Loading properties file from class path resource [jdbc.properties]
+2018-04-27 22:11:49,985 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-27 22:11:50,798 - code----com.etyero.entity.Code@79e4c792
+2018-04-27 22:11:50,798 - code转为json
+2018-04-27 22:11:50,926 - {"code":"234567","id":1}
+2018-04-27 22:11:50,945 - Closing org.springframework.context.support.GenericApplicationContext@53b32d7: startup date [Fri Apr 27 22:11:49 CST 2018]; root of context hierarchy

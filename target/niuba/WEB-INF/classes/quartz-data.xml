@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<description>定时器管理</description>
+
+	<bean id="GetCHTInfoTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="GetCHTInfoTask" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+	<bean id="GetCHTInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetCHTInfoTaskJobDetail"></property>
+		<property name="cronExpression" value="0 0 */4 * * ?"></property>
+	</bean>
+
+
+
+	<bean id="GetDTInfoTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="GetDTInfoTask" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+	<bean id="GetDTInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetDTInfoTaskJobDetail"></property>
+		<property name="cronExpression" value="0 /5 * * * ?"></property>
+	</bean>
+
+
+
+	<bean id="GetDTYesterdayInfoTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="GetDTYesterdayInfoTask" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+	<bean id="GetDTYesterdayInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetDTYesterdayInfoTaskJobDetail"></property>
+		<property name="cronExpression" value="0 1 0 * * ?"></property>
+	</bean>
+
+
+
+	<bean id="GetExchangeRankTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="GetExchangeRankTask" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+	<bean id="GetExchangeRankTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetExchangeRankTaskJobDetail"></property>
+		<property name="cronExpression" value="0 0 * * * ?"></property>
+	</bean>
+
+
+
+	<bean id="GetHXCInfoTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="GetHXCInfoTask" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+	<bean id="GetHXCInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetHXCInfoTaskJobDetail"></property>
+		<property name="cronExpression" value="0 0 */4 * * ?"></property>
+	</bean>
+
+	<bean id="GetLcexInfoTaskJobDetail"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="GetLcexInfoTask" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+	<bean id="GetLcexInfoTaskTrigger"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<property name="jobDetail" ref="GetLcexInfoTaskJobDetail"></property>
+		<property name="cronExpression" value="0 /5 * * * ?"></property>
+	</bean>
+
+
+	<!-- schedule factory -->
+	<bean id="SpringJobSchedulerFactoryBean"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="GetCHTInfoTaskTrigger" />
+				<ref bean="GetDTInfoTaskTrigger" />
+				<ref bean="GetDTYesterdayInfoTaskTrigger" />
+				<ref bean="GetExchangeRankTaskTrigger" />
+				<ref bean="GetHXCInfoTaskTrigger" />
+				<ref bean="GetLcexInfoTaskTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

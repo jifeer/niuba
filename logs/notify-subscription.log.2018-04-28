@@ -1,0 +1,29 @@
+2018-04-28 13:49:44,034 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-28 13:49:44,196 - Refreshing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:49:44 CST 2018]; root of context hierarchy
+2018-04-28 13:49:44,287 - Loading properties file from class path resource [jdbc.properties]
+2018-04-28 13:49:44,291 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-28 13:49:44,914 - Closing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:49:44 CST 2018]; root of context hierarchy
+2018-04-28 13:51:41,062 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-28 13:51:41,220 - Refreshing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:51:41 CST 2018]; root of context hierarchy
+2018-04-28 13:51:41,306 - Loading properties file from class path resource [jdbc.properties]
+2018-04-28 13:51:41,310 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-28 13:51:41,907 - code----com.etyero.entity.Code@3f191845
+2018-04-28 13:51:41,907 - code转为json
+2018-04-28 13:51:41,976 - {"code":"234567","id":1}
+2018-04-28 13:51:41,978 - Closing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:51:41 CST 2018]; root of context hierarchy
+2018-04-28 13:51:49,111 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-28 13:51:49,267 - Refreshing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:51:49 CST 2018]; root of context hierarchy
+2018-04-28 13:51:49,357 - Loading properties file from class path resource [jdbc.properties]
+2018-04-28 13:51:49,360 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-28 13:51:50,165 - code----com.etyero.entity.Code@3f191845
+2018-04-28 13:51:50,165 - code转为json
+2018-04-28 13:51:50,234 - {"code":"1258989","id":1}
+2018-04-28 13:51:50,237 - Closing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:51:49 CST 2018]; root of context hierarchy
+2018-04-28 13:52:08,740 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-04-28 13:52:08,894 - Refreshing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:52:08 CST 2018]; root of context hierarchy
+2018-04-28 13:52:08,980 - Loading properties file from class path resource [jdbc.properties]
+2018-04-28 13:52:08,984 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-04-28 13:52:09,587 - code----[com.etyero.entity.Code@3f191845, com.etyero.entity.Code@5f049ea1]
+2018-04-28 13:52:09,588 - code转为json
+2018-04-28 13:52:09,658 - [{"code":"234567","id":1},{"code":"1258989","id":1}]
+2018-04-28 13:52:09,661 - Closing org.springframework.context.support.GenericApplicationContext@1a968a59: startup date [Sat Apr 28 13:52:08 CST 2018]; root of context hierarchy

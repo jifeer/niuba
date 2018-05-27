@@ -1,0 +1,35 @@
+/*************** 清除浮动影响  开始 ***************/
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*************** 清除浮动影响  结束 ***************/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.root {
+  margin-left: 200px;
+  min-width: 1000px;
+  color: #555;
+}
+
+$mainColor: red;
+$navBar_width: 200px;

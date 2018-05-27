@@ -1,0 +1,447 @@
+2018-05-06 20:31:39,003 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 20:31:39,504 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 20:31:39,614 - Refreshing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 20:31:39 CST 2018]; root of context hierarchy
+2018-05-06 20:31:39,945 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 20:31:39,963 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 20:31:40,377 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,379 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,381 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,382 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,383 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,384 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,385 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,387 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,392 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 20:31:40,392 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:31:40,896 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@750e2b97] to prepare test instance [com.etyero.service.test.ValueTest@3e27aa33]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'accessInfoController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.service.AccessInfoService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.service.AccessInfoService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:441)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:419)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 41 more
+2018-05-06 20:33:30,610 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 20:33:30,999 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 20:33:31,050 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-05-06 20:33:31,152 - Refreshing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 20:33:31 CST 2018]; root of context hierarchy
+2018-05-06 20:33:31,440 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 20:33:31,450 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 20:33:32,354 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,356 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,358 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,358 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,360 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,361 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,362 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,363 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,367 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 20:33:32,367 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:33:32,781 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-05-06 20:33:32,928 - Using default implementation for ThreadExecutor
+2018-05-06 20:33:33,040 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-05-06 20:33:33,040 - Quartz Scheduler v.2.3.0 created.
+2018-05-06 20:33:33,047 - RAMJobStore initialized.
+2018-05-06 20:33:33,049 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-05-06 20:33:33,049 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-05-06 20:33:33,049 - Quartz scheduler version: 2.3.0
+2018-05-06 20:33:33,053 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@436c81a3
+2018-05-06 20:33:33,111 - Starting beans in phase 2147483647
+2018-05-06 20:33:33,111 - Starting Quartz Scheduler now
+2018-05-06 20:33:33,112 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-05-06 20:33:33,124 - baseUrl2----https://api.jinse.com
+2018-05-06 20:33:33,601 - Closing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 20:33:31 CST 2018]; root of context hierarchy
+2018-05-06 20:33:33,603 - Stopping beans in phase 2147483647
+2018-05-06 20:33:33,605 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 20:33:33,608 - Shutting down Quartz Scheduler
+2018-05-06 20:33:33,608 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2018-05-06 20:33:33,608 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 20:33:33,609 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2018-05-06 20:34:31,127 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 20:34:31,562 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 20:34:31,670 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-05-06 20:34:31,764 - Refreshing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 20:34:31 CST 2018]; root of context hierarchy
+2018-05-06 20:34:32,041 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 20:34:32,054 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 20:34:32,851 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,853 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,855 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,856 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,857 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,858 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,860 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,861 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:32,867 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 20:34:32,867 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:34:33,243 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-05-06 20:34:33,384 - Using default implementation for ThreadExecutor
+2018-05-06 20:34:33,415 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-05-06 20:34:33,416 - Quartz Scheduler v.2.3.0 created.
+2018-05-06 20:34:33,420 - RAMJobStore initialized.
+2018-05-06 20:34:33,422 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-05-06 20:34:33,422 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-05-06 20:34:33,422 - Quartz scheduler version: 2.3.0
+2018-05-06 20:34:33,426 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@436c81a3
+2018-05-06 20:34:33,590 - Starting beans in phase 2147483647
+2018-05-06 20:34:33,590 - Starting Quartz Scheduler now
+2018-05-06 20:34:33,591 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-05-06 20:34:33,605 - baseUrl2----https://api.jinse.com
+2018-05-06 20:34:35,067 - 从金色财经获取简讯----请求：https://api.jinse.com/v4/live/list?limit=20，----响应：{"date":"2018-05-06","lives":[{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525610004,"sort":"公告","content":"【美国初创公司转战加拿大 规避政策风险】据Business Insider消息，致力于帮助数字货币小白进行交易的迈阿密初创公司CBlocks在短短30天内，盈利超32000美元，且订单不断。然而该公司却停止处理订单，以规避法律问题。据悉，该公司法律无法明确界定公司是否为金融服务公司，而这将决定适用的美国监管法律。目前该公司正考虑转移至加拿大，减少监管相关支出。","down_counts":0,"readings":[],"up_counts":1,"grade":3,"id":26862,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606978,"sort":"政策","content":"【印度尼西亚部署区块链技术推动政府治理】据CNN消息，印度尼西亚正在尝试使用区块链技术来组织其落后的政府数据系统。印度尼西亚遍布1.7万个岛屿，拥有超过2.5亿人口，因此通过传统纸质方式来管理政府数据的效率已经无法满足时代要求了。监管机构有一个专门的团队来研究区块链技术如何帮助该国的金融服务行业。此外，政府决策者也希望通过区块链技术减少该国公共计划中的支出，改善政府的问责制。","down_counts":14,"readings":[],"up_counts":15,"grade":4,"id":26861,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606956,"sort":"公告","content":"【电子竞技区块链项目EsportsChain（EST）将于5月8日15点登陆BIT-Z交易所】EsportsChain（EST）将于5月8日在BIT-Z交易所首发。电竞链EsportsChain（EST）将通过游戏虚拟资产交易平台、新型电竞比赛预测平台、智能游戏电竞赛事系统、电竞IP衍生品生产与交易系统等，构建一张电竞价值互联网，提升电竞领域内的价值交换效率。","down_counts":11,"readings":[],"up_counts":9,"grade":4,"id":26860,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606891,"sort":"人物","content":"【欧链科技CEO老狼：将启动EOS社区开源计划】OracleChain团队CEO老狼（赵微）在2018全球石墨烯区块链开发者大会发表“OracleChain的EOS节点竞选之路”的演讲，介绍了团队在专利和技术标准方面的进展，以及在预言机服务、PocketEOS钱包应用、EOSDevHelper开源工具、EOS-BP-DAO节点收益分配方案等对社区做出的贡献。在圆桌辩论中，老狼宣布，将在近期公布EOS社区开源计划。","down_counts":15,"readings":[],"up_counts":29,"grade":4,"id":26859,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606436,"sort":"行情","content":"【Coinness分析：BTC依然有回调空间 $9542为短期多空分水岭】据Coinness作者分析，BTC自4月12日反弹以来，已两次接近200日均线但还从未触线，4月25日上攻后回调整理了近一周，BTC此次突破未果后，近两日恐怕很难再产生有效的上攻。从4小时图上看，BTC跌破布林带中轨后依然有向下轨运行的空间，同时也未调整到最近的支撑点10日线均线（$9411），短期须注意继续下行的风险。如果跌破10日均线，下一个有力支撑将在三角整理的上沿（约$9100附近）。而使BTC再次回归反攻走势的条件则是：能保持两日收于$9542之上。总之，短期BTC依然有回调空间，连续两日收于$9542（5月4日低点）之上，BTC才有望继续上攻。","down_counts":20,"readings":[],"up_counts":8,"grade":3,"id":26858,"link_name":""},{"images":[],"zan_status":"","link":"http://www.bishijie.com/home/newsflashpc/detail?id=30717","highlight_color":"","created_at":1525606222,"sort":"行情","content":"【BTC在9600美元附近震荡 市值前百币种95跌5涨】BTC自今日下午开始震荡下跌，整个市场跟随其下行。目前BTC在9600美元附近震荡，暂报9577美元，跌幅3.62%。市值前百币种普遍下跌，仅5个币种表现为涨，其中ELA涨幅最大，涨幅9.74%，暂报56.4美元；VERI跌幅最大，跌幅13.45%，暂报112.14美元。主流币中仅BCH表现为涨，暂报1724美元，涨幅3.58%。","down_counts":24,"readings":[],"up_counts":10,"grade":4,"id":26857,"link_name":"原文链接"},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525605133,"sort":"人物","content":"【helloEOS创始人梓岑：超越ETH，对EOS而言目标太小】helloEOS创始人梓岑在一场会议上表示，“我并不觉得ETH会成为EOS的对手，超越ETH这样的目标，对EOS来说显得太小。","down_counts":36,"readings":[],"up_counts":45,"grade":3,"id":26856,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525604409,"sort":"公告","content":"【GitHub活跃度排行榜：NULS、TRX维持第一、第二】据CryptoMiso数据，过去3个月内GitHub代码活跃度排名中，前三维持不变，分别为NULS、TRX和EOS。排行榜前十分别为NULS、TRX、EOS、ZRX、ZSC、MOT、RHOC、ZIL、AION、REN。在全部上线的362个币种中，BTC排名第31（下降6名），ETH排名第74（下降22名），ETC排名第55（下降1名），BCH排名第67（维持不变），XRP排名第114（上升4名），LTC排名第133（上升149名）。","down_counts":18,"readings":[],"up_counts":17,"grade":3,"id":26855,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525604365,"sort":"公告","content":"【Gartner调查发现：区块链技术全球采用率仅为1%】Gartner在其2018年对首席信息官（CIO）的调查中表示，尽管电信、保险和金融服务的高管们在计划采用去中心化的技术时表现出了强烈的热情，但全球信息公司信息管理人员对区块链技术的采用和兴趣仍然很低。在Gartner调查的CIO中，只有1%的人承认“在他们的组织中采用了任何类型的区块链”，而只有8%的人对区块链技术有短期计划或正在积极尝试区块链技术。","down_counts":19,"readings":[],"up_counts":9,"grade":4,"id":26854,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525602379,"sort":"公告","content":"【比特币全网未确认交易笔数再抬头 最高破6700】据最新数据，随着BTC价格回暖，比特币全网未确认交易笔数再次抬头，目前最高破6700，最低为4900左右。","down_counts":26,"readings":[],"up_counts":37,"grade":4,"id":26853,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525602308,"sort":"行情","content":"【BTC跌下9600美元】据火币Pro最新数据，BTC价格跌下9600美元，暂报9592.94美元，跌幅为3.46%。目前BTC全球均价为9599.44美元，跌幅为3.52%。总市值排名前10币种，仅BCH微涨1.69%，暂报1724.23美元；排名前100币种仅8个币种上涨，涨幅最大为SOC,涨幅21.96%。","down_counts":24,"readings":[],"up_counts":21,"grade":4,"id":26852,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525601965,"sort":"公告","content":"【NULS CUP国际区块链创新应用（DAPP）设计大赛启动仪式圆满成功】5月5日，由NULS主办的首个以区块链技术应用（DAPP）为主题的全球性大赛启动仪式圆满成功，本次大赛得到了教育部、工信部、中国计算机学会区块链专业委员会以及重庆市渝中区人民政府的大力指导，活动现场首创区块链奇葩说辩论环节引发激烈辩论，将现场氛围推向高点。据悉，本次大赛分为社会组和高校组，优秀DAPP应用将获得现金大奖、项目孵化服务以及200-1000万的投资机会。","down_counts":13,"readings":[],"up_counts":21,"grade":4,"id":26851,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525601897,"sort":"公告","content":"【Chaince宣布全面支持所有EOS的糖果空投】据金色财经合作媒体IMEOS报道，五月六日，在上海举行的2018全球石墨烯区块链开发者大会上，Chaince创始人兼CEO 吴子臻宣布Chaince将成为全球首家全面支持所有EOS主网糖果空投的交易平台，包括支持相关空投的接收，分发，充值和转账，并将进一步开放部分优质空投token的交易功能。用户无需复杂的操作，即可在Chaince平台账户享受持币空投权益。","down_counts":13,"readings":[],"up_counts":42,"grade":4,"id":26850,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525598069,"sort":"公告","content":"【以太坊企业联盟提醒每个人它仍然活跃，发布新的架构堆栈】自近18个月前成立以来，以太坊企业联盟一直比较低调。然而近日，企业以太坊联盟（EEA）正式公布了其企业Ethereum体系结构堆栈，作为其企业以太坊规范战略的下一部分。","down_counts":30,"readings":[],"up_counts":31,"grade":4,"id":26849,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597652,"sort":"公告","content":"【区块链将改变在线交互游戏行业】外媒称，在线交互游戏行业就是区块链技术相对集中应用的行业之一。区块链技术为这个行业提供了更好的技术支持，并有效地解决了诸如便捷，公平，声誉和信任等全球游戏行业共同面临的诸多棘手问题。借助这项技术，在线交互游戏行业将变得绝对的透明且诱惑人心。随机数生成程序和自动报告系统将不再由人来进行管理，而是通过加密可验证代码进行管理，这将大大提高信任级别，进而对在线交互游戏行业造成革命性的影响。 我们猜测未来区块链将为在线交互游戏行业带来如下变化。","down_counts":33,"readings":[],"up_counts":15,"grade":3,"id":26848,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"red","created_at":1525597590,"sort":"精选","content":"【人民创投：二三线城市在区块链上的布局早已起跑】人民创投近日刊文称，在当下国内这股区块链的浪潮中，相比北京、上海等一线城市政府的“冷静克制”，二三线城市在区块链上的布局，早已起跑。据不完全统计，国内共有贵州、浙江、江苏、广东、山东、福建、江西、内蒙古、重庆、成都、新疆等个十余个省、市、自治区就区块链发布了指导意见，多个省份甚至将区块链列入本省的“十三五”战略发展规划之中。","down_counts":29,"readings":[],"up_counts":59,"grade":5,"id":26847,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597439,"sort":"公告","content":"【移动通信公司MobileBridge推出区块链技术平台Momentum】今天，移动通信公司 MobileBridge宣布推出了其基于区块链技术的平台——Momentum。Momentum是一个专门针对消费者和特定品牌的以虚拟货币取代积分制的忠诚度项目。","down_counts":27,"readings":[],"up_counts":24,"grade":3,"id":26846,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597365,"sort":"公告","content":"【埃塞俄比亚联手虚拟货币创企Cardano，将区块链技术应用于农业】埃塞俄比亚是最新一个表示对区块链解决方案有兴趣的非洲国家。它和新兴虚拟货币创企Cardano签署了谅解备忘录，以培训区块链开发人员，将这种技术应用于当地的农业。今天早上，Cardano的领导Charles Hoskinson，也就是以太币的联合创始人，宣布这个倡议将专注于培训开发人员使用区块链。","down_counts":19,"readings":[],"up_counts":22,"grade":3,"id":26845,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597210,"sort":"公告","content":"【穆迪信贷策略总经理科林埃利斯：区块链会降低银行成本】据法新社报道，穆迪信贷策略总经理科林埃利斯表示，任何破坏性冲击下， 无论是技术、经济还是政治，都会产生赢家和输家，区块链也不例外。但他认为，在区块链的作用下，可能会降低银行的成本，但同时可能引发更多的竞争，从而对收费产生下行压力。而且，区块链可能在金融交易结算和清算领域产生重要影响。","down_counts":16,"readings":[],"up_counts":10,"grade":3,"id":26844,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597129,"sort":"公告","content":"【美国18岁高中生玩3年“虚拟货币”开公司】虚拟货币市场不断扩张，除了广为人知的比特币外，事实上全球有多达1200种虚拟币存在。来自美国俄亥俄州18岁的艾迪．兹兰（Eddy Zillan），3年前投资名气较小的以太币（ETH），没想到让他压对宝，小小年纪就成为千万富翁，同时还创立公司，专替企业或个人提供投资建议，而1小时咨询费高达250美元。","down_counts":20,"readings":[],"up_counts":28,"grade":3,"id":26843,"link_name":""}]}
+2018-05-06 20:34:35,082 - Closing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 20:34:31 CST 2018]; root of context hierarchy
+2018-05-06 20:34:35,083 - Stopping beans in phase 2147483647
+2018-05-06 20:34:35,085 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 20:34:35,086 - Shutting down Quartz Scheduler
+2018-05-06 20:34:35,086 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2018-05-06 20:34:35,086 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 20:34:35,087 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2018-05-06 20:51:35,166 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 20:51:35,586 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 20:51:35,638 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-05-06 20:51:35,736 - Refreshing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 20:51:35 CST 2018]; root of context hierarchy
+2018-05-06 20:51:36,087 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 20:51:36,096 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 20:51:36,846 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,847 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,848 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,848 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,850 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,851 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,853 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,855 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:36,857 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 20:51:36,858 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 20:51:37,212 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-05-06 20:51:37,360 - Using default implementation for ThreadExecutor
+2018-05-06 20:51:37,459 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-05-06 20:51:37,459 - Quartz Scheduler v.2.3.0 created.
+2018-05-06 20:51:37,465 - RAMJobStore initialized.
+2018-05-06 20:51:37,467 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-05-06 20:51:37,467 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-05-06 20:51:37,467 - Quartz scheduler version: 2.3.0
+2018-05-06 20:51:37,469 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3561c410
+2018-05-06 20:51:37,535 - Starting beans in phase 2147483647
+2018-05-06 20:51:37,535 - Starting Quartz Scheduler now
+2018-05-06 20:51:37,535 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-05-06 20:51:37,551 - baseUrl----https://api.jinse.com
+2018-05-06 20:51:38,899 - 从金色财经获取简讯----请求：https://api.jinse.com/v4/live/list?limit=20，----响应：{"date":"2018-05-06","lives":[{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525610777,"sort":"公告","content":"【比特币跌势难止，日内连失五大整数关口】比特币自早间短暂站上9900美元后便持续下滑，日内连续失守9900、9800、9700、9600、9500四大关口，最低触及9464.11美元，目前小幅反弹至9500美元附近交投，现报9526.88美元，24小时跌4.29%。","down_counts":2,"readings":[],"up_counts":3,"grade":4,"id":26864,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525610739,"sort":"公告","content":"【印度央行实施禁令之前，当地加密货币交易量不减反增】在印度储备银行正式启动实施加密货币禁令之前，该国投资者开始纷纷交易加密货币。当地加密货币行业普遍认为印度政府不会彻底禁止加密货币交易。自从该禁令颁布之后，印度加密货币交易量急剧上升。路透社报道称，加密货币交易所运营商、投资者和行业分析师都认为，之所以出现这样的状况，是因为人们急于利用印度储备银行切断印度与加密货币交易商和交易所关系的三个月时间窗口，尽快交易。","down_counts":1,"readings":[],"up_counts":2,"grade":3,"id":26863,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525610004,"sort":"公告","content":"【美国初创公司转战加拿大 规避政策风险】据Business Insider消息，致力于帮助数字货币小白进行交易的迈阿密初创公司CBlocks在短短30天内，盈利超32000美元，且订单不断。然而该公司却停止处理订单，以规避法律问题。据悉，该公司法律无法明确界定公司是否为金融服务公司，而这将决定适用的美国监管法律。目前该公司正考虑转移至加拿大，减少监管相关支出。","down_counts":3,"readings":[],"up_counts":3,"grade":3,"id":26862,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606978,"sort":"政策","content":"【印度尼西亚部署区块链技术推动政府治理】据CNN消息，印度尼西亚正在尝试使用区块链技术来组织其落后的政府数据系统。印度尼西亚遍布1.7万个岛屿，拥有超过2.5亿人口，因此通过传统纸质方式来管理政府数据的效率已经无法满足时代要求了。监管机构有一个专门的团队来研究区块链技术如何帮助该国的金融服务行业。此外，政府决策者也希望通过区块链技术减少该国公共计划中的支出，改善政府的问责制。","down_counts":18,"readings":[],"up_counts":17,"grade":4,"id":26861,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606956,"sort":"公告","content":"【电子竞技区块链项目EsportsChain（EST）将于5月8日15点登陆BIT-Z交易所】EsportsChain（EST）将于5月8日在BIT-Z交易所首发。电竞链EsportsChain（EST）将通过游戏虚拟资产交易平台、新型电竞比赛预测平台、智能游戏电竞赛事系统、电竞IP衍生品生产与交易系统等，构建一张电竞价值互联网，提升电竞领域内的价值交换效率。","down_counts":12,"readings":[],"up_counts":9,"grade":4,"id":26860,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606891,"sort":"人物","content":"【欧链科技CEO老狼：将启动EOS社区开源计划】OracleChain团队CEO老狼（赵微）在2018全球石墨烯区块链开发者大会发表“OracleChain的EOS节点竞选之路”的演讲，介绍了团队在专利和技术标准方面的进展，以及在预言机服务、PocketEOS钱包应用、EOSDevHelper开源工具、EOS-BP-DAO节点收益分配方案等对社区做出的贡献。在圆桌辩论中，老狼宣布，将在近期公布EOS社区开源计划。","down_counts":18,"readings":[],"up_counts":35,"grade":4,"id":26859,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606436,"sort":"行情","content":"【Coinness分析：BTC依然有回调空间 $9542为短期多空分水岭】据Coinness作者分析，BTC自4月12日反弹以来，已两次接近200日均线但还从未触线，4月25日上攻后回调整理了近一周，BTC此次突破未果后，近两日恐怕很难再产生有效的上攻。从4小时图上看，BTC跌破布林带中轨后依然有向下轨运行的空间，同时也未调整到最近的支撑点10日线均线（$9411），短期须注意继续下行的风险。如果跌破10日均线，下一个有力支撑将在三角整理的上沿（约$9100附近）。而使BTC再次回归反攻走势的条件则是：能保持两日收于$9542之上。总之，短期BTC依然有回调空间，连续两日收于$9542（5月4日低点）之上，BTC才有望继续上攻。","down_counts":23,"readings":[],"up_counts":9,"grade":3,"id":26858,"link_name":""},{"images":[],"zan_status":"","link":"http://www.bishijie.com/home/newsflashpc/detail?id=30717","highlight_color":"","created_at":1525606222,"sort":"行情","content":"【BTC在9600美元附近震荡 市值前百币种95跌5涨】BTC自今日下午开始震荡下跌，整个市场跟随其下行。目前BTC在9600美元附近震荡，暂报9577美元，跌幅3.62%。市值前百币种普遍下跌，仅5个币种表现为涨，其中ELA涨幅最大，涨幅9.74%，暂报56.4美元；VERI跌幅最大，跌幅13.45%，暂报112.14美元。主流币中仅BCH表现为涨，暂报1724美元，涨幅3.58%。","down_counts":25,"readings":[],"up_counts":12,"grade":4,"id":26857,"link_name":"原文链接"},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525605133,"sort":"人物","content":"【helloEOS创始人梓岑：超越ETH，对EOS而言目标太小】helloEOS创始人梓岑在一场会议上表示，“我并不觉得ETH会成为EOS的对手，超越ETH这样的目标，对EOS来说显得太小。","down_counts":39,"readings":[],"up_counts":51,"grade":3,"id":26856,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525604409,"sort":"公告","content":"【GitHub活跃度排行榜：NULS、TRX维持第一、第二】据CryptoMiso数据，过去3个月内GitHub代码活跃度排名中，前三维持不变，分别为NULS、TRX和EOS。排行榜前十分别为NULS、TRX、EOS、ZRX、ZSC、MOT、RHOC、ZIL、AION、REN。在全部上线的362个币种中，BTC排名第31（下降6名），ETH排名第74（下降22名），ETC排名第55（下降1名），BCH排名第67（维持不变），XRP排名第114（上升4名），LTC排名第133（上升149名）。","down_counts":18,"readings":[],"up_counts":18,"grade":3,"id":26855,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525604365,"sort":"公告","content":"【Gartner调查发现：区块链技术全球采用率仅为1%】Gartner在其2018年对首席信息官（CIO）的调查中表示，尽管电信、保险和金融服务的高管们在计划采用去中心化的技术时表现出了强烈的热情，但全球信息公司信息管理人员对区块链技术的采用和兴趣仍然很低。在Gartner调查的CIO中，只有1%的人承认“在他们的组织中采用了任何类型的区块链”，而只有8%的人对区块链技术有短期计划或正在积极尝试区块链技术。","down_counts":19,"readings":[],"up_counts":10,"grade":4,"id":26854,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525602379,"sort":"公告","content":"【比特币全网未确认交易笔数再抬头 最高破6700】据最新数据，随着BTC价格回暖，比特币全网未确认交易笔数再次抬头，目前最高破6700，最低为4900左右。","down_counts":26,"readings":[],"up_counts":37,"grade":4,"id":26853,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525602308,"sort":"行情","content":"【BTC跌下9600美元】据火币Pro最新数据，BTC价格跌下9600美元，暂报9592.94美元，跌幅为3.46%。目前BTC全球均价为9599.44美元，跌幅为3.52%。总市值排名前10币种，仅BCH微涨1.69%，暂报1724.23美元；排名前100币种仅8个币种上涨，涨幅最大为SOC,涨幅21.96%。","down_counts":24,"readings":[],"up_counts":21,"grade":4,"id":26852,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525601965,"sort":"公告","content":"【NULS CUP国际区块链创新应用（DAPP）设计大赛启动仪式圆满成功】5月5日，由NULS主办的首个以区块链技术应用（DAPP）为主题的全球性大赛启动仪式圆满成功，本次大赛得到了教育部、工信部、中国计算机学会区块链专业委员会以及重庆市渝中区人民政府的大力指导，活动现场首创区块链奇葩说辩论环节引发激烈辩论，将现场氛围推向高点。据悉，本次大赛分为社会组和高校组，优秀DAPP应用将获得现金大奖、项目孵化服务以及200-1000万的投资机会。","down_counts":13,"readings":[],"up_counts":21,"grade":4,"id":26851,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525601897,"sort":"公告","content":"【Chaince宣布全面支持所有EOS的糖果空投】据金色财经合作媒体IMEOS报道，五月六日，在上海举行的2018全球石墨烯区块链开发者大会上，Chaince创始人兼CEO 吴子臻宣布Chaince将成为全球首家全面支持所有EOS主网糖果空投的交易平台，包括支持相关空投的接收，分发，充值和转账，并将进一步开放部分优质空投token的交易功能。用户无需复杂的操作，即可在Chaince平台账户享受持币空投权益。","down_counts":13,"readings":[],"up_counts":44,"grade":4,"id":26850,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525598069,"sort":"公告","content":"【以太坊企业联盟提醒每个人它仍然活跃，发布新的架构堆栈】自近18个月前成立以来，以太坊企业联盟一直比较低调。然而近日，企业以太坊联盟（EEA）正式公布了其企业Ethereum体系结构堆栈，作为其企业以太坊规范战略的下一部分。","down_counts":30,"readings":[],"up_counts":31,"grade":4,"id":26849,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597652,"sort":"公告","content":"【区块链将改变在线交互游戏行业】外媒称，在线交互游戏行业就是区块链技术相对集中应用的行业之一。区块链技术为这个行业提供了更好的技术支持，并有效地解决了诸如便捷，公平，声誉和信任等全球游戏行业共同面临的诸多棘手问题。借助这项技术，在线交互游戏行业将变得绝对的透明且诱惑人心。随机数生成程序和自动报告系统将不再由人来进行管理，而是通过加密可验证代码进行管理，这将大大提高信任级别，进而对在线交互游戏行业造成革命性的影响。 我们猜测未来区块链将为在线交互游戏行业带来如下变化。","down_counts":33,"readings":[],"up_counts":15,"grade":3,"id":26848,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"red","created_at":1525597590,"sort":"精选","content":"【人民创投：二三线城市在区块链上的布局早已起跑】人民创投近日刊文称，在当下国内这股区块链的浪潮中，相比北京、上海等一线城市政府的“冷静克制”，二三线城市在区块链上的布局，早已起跑。据不完全统计，国内共有贵州、浙江、江苏、广东、山东、福建、江西、内蒙古、重庆、成都、新疆等个十余个省、市、自治区就区块链发布了指导意见，多个省份甚至将区块链列入本省的“十三五”战略发展规划之中。","down_counts":29,"readings":[],"up_counts":60,"grade":5,"id":26847,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597439,"sort":"公告","content":"【移动通信公司MobileBridge推出区块链技术平台Momentum】今天，移动通信公司 MobileBridge宣布推出了其基于区块链技术的平台——Momentum。Momentum是一个专门针对消费者和特定品牌的以虚拟货币取代积分制的忠诚度项目。","down_counts":27,"readings":[],"up_counts":24,"grade":3,"id":26846,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597365,"sort":"公告","content":"【埃塞俄比亚联手虚拟货币创企Cardano，将区块链技术应用于农业】埃塞俄比亚是最新一个表示对区块链解决方案有兴趣的非洲国家。它和新兴虚拟货币创企Cardano签署了谅解备忘录，以培训区块链开发人员，将这种技术应用于当地的农业。今天早上，Cardano的领导Charles Hoskinson，也就是以太币的联合创始人，宣布这个倡议将专注于培训开发人员使用区块链。","down_counts":20,"readings":[],"up_counts":22,"grade":3,"id":26845,"link_name":""}]}
+2018-05-06 20:51:38,915 - Closing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 20:51:35 CST 2018]; root of context hierarchy
+2018-05-06 20:51:38,916 - Stopping beans in phase 2147483647
+2018-05-06 20:51:38,918 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 20:51:38,919 - Shutting down Quartz Scheduler
+2018-05-06 20:51:38,919 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2018-05-06 20:51:38,919 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 20:51:38,920 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2018-05-06 21:00:02,932 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 21:00:03,354 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 21:00:03,423 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-05-06 21:00:03,591 - Refreshing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 21:00:03 CST 2018]; root of context hierarchy
+2018-05-06 21:00:03,873 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 21:00:03,883 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 21:00:04,712 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,714 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,716 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,717 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,718 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,719 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,722 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,724 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:04,727 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 21:00:04,727 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:05,077 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-05-06 21:00:05,226 - Using default implementation for ThreadExecutor
+2018-05-06 21:00:05,250 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-05-06 21:00:05,250 - Quartz Scheduler v.2.3.0 created.
+2018-05-06 21:00:05,256 - RAMJobStore initialized.
+2018-05-06 21:00:05,257 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-05-06 21:00:05,257 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-05-06 21:00:05,257 - Quartz scheduler version: 2.3.0
+2018-05-06 21:00:05,260 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3561c410
+2018-05-06 21:00:05,403 - Starting beans in phase 2147483647
+2018-05-06 21:00:05,404 - Starting Quartz Scheduler now
+2018-05-06 21:00:05,404 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-05-06 21:00:05,427 - baseUrl----https://api.jinse.com
+2018-05-06 21:00:06,886 - 从金色财经获取简讯----请求：https://api.jinse.com/v4/live/list?limit=20，----响应：{"date":"2018-05-06","lives":[{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525610777,"sort":"公告","content":"【比特币跌势难止，日内连失五大整数关口】比特币自早间短暂站上9900美元后便持续下滑，日内连续失守9900、9800、9700、9600、9500四大关口，最低触及9464.11美元，目前小幅反弹至9500美元附近交投，现报9526.88美元，24小时跌4.29%。","down_counts":7,"readings":[],"up_counts":11,"grade":4,"id":26864,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525610739,"sort":"公告","content":"【印度央行实施禁令之前，当地加密货币交易量不减反增】在印度储备银行正式启动实施加密货币禁令之前，该国投资者开始纷纷交易加密货币。当地加密货币行业普遍认为印度政府不会彻底禁止加密货币交易。自从该禁令颁布之后，印度加密货币交易量急剧上升。路透社报道称，加密货币交易所运营商、投资者和行业分析师都认为，之所以出现这样的状况，是因为人们急于利用印度储备银行切断印度与加密货币交易商和交易所关系的三个月时间窗口，尽快交易。","down_counts":5,"readings":[],"up_counts":5,"grade":3,"id":26863,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525610004,"sort":"公告","content":"【美国初创公司转战加拿大 规避政策风险】据Business Insider消息，致力于帮助数字货币小白进行交易的迈阿密初创公司CBlocks在短短30天内，盈利超32000美元，且订单不断。然而该公司却停止处理订单，以规避法律问题。据悉，该公司法律无法明确界定公司是否为金融服务公司，而这将决定适用的美国监管法律。目前该公司正考虑转移至加拿大，减少监管相关支出。","down_counts":5,"readings":[],"up_counts":4,"grade":3,"id":26862,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606978,"sort":"政策","content":"【印度尼西亚部署区块链技术推动政府治理】据CNN消息，印度尼西亚正在尝试使用区块链技术来组织其落后的政府数据系统。印度尼西亚遍布1.7万个岛屿，拥有超过2.5亿人口，因此通过传统纸质方式来管理政府数据的效率已经无法满足时代要求了。监管机构有一个专门的团队来研究区块链技术如何帮助该国的金融服务行业。此外，政府决策者也希望通过区块链技术减少该国公共计划中的支出，改善政府的问责制。","down_counts":19,"readings":[],"up_counts":19,"grade":4,"id":26861,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606956,"sort":"公告","content":"【电子竞技区块链项目EsportsChain（EST）将于5月8日15点登陆BIT-Z交易所】EsportsChain（EST）将于5月8日在BIT-Z交易所首发。电竞链EsportsChain（EST）将通过游戏虚拟资产交易平台、新型电竞比赛预测平台、智能游戏电竞赛事系统、电竞IP衍生品生产与交易系统等，构建一张电竞价值互联网，提升电竞领域内的价值交换效率。","down_counts":14,"readings":[],"up_counts":12,"grade":4,"id":26860,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606891,"sort":"人物","content":"【欧链科技CEO老狼：将启动EOS社区开源计划】OracleChain团队CEO老狼（赵微）在2018全球石墨烯区块链开发者大会发表“OracleChain的EOS节点竞选之路”的演讲，介绍了团队在专利和技术标准方面的进展，以及在预言机服务、PocketEOS钱包应用、EOSDevHelper开源工具、EOS-BP-DAO节点收益分配方案等对社区做出的贡献。在圆桌辩论中，老狼宣布，将在近期公布EOS社区开源计划。","down_counts":18,"readings":[],"up_counts":37,"grade":4,"id":26859,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525606436,"sort":"行情","content":"【Coinness分析：BTC依然有回调空间 $9542为短期多空分水岭】据Coinness作者分析，BTC自4月12日反弹以来，已两次接近200日均线但还从未触线，4月25日上攻后回调整理了近一周，BTC此次突破未果后，近两日恐怕很难再产生有效的上攻。从4小时图上看，BTC跌破布林带中轨后依然有向下轨运行的空间，同时也未调整到最近的支撑点10日线均线（$9411），短期须注意继续下行的风险。如果跌破10日均线，下一个有力支撑将在三角整理的上沿（约$9100附近）。而使BTC再次回归反攻走势的条件则是：能保持两日收于$9542之上。总之，短期BTC依然有回调空间，连续两日收于$9542（5月4日低点）之上，BTC才有望继续上攻。","down_counts":23,"readings":[],"up_counts":10,"grade":3,"id":26858,"link_name":""},{"images":[],"zan_status":"","link":"http://www.bishijie.com/home/newsflashpc/detail?id=30717","highlight_color":"","created_at":1525606222,"sort":"行情","content":"【BTC在9600美元附近震荡 市值前百币种95跌5涨】BTC自今日下午开始震荡下跌，整个市场跟随其下行。目前BTC在9600美元附近震荡，暂报9577美元，跌幅3.62%。市值前百币种普遍下跌，仅5个币种表现为涨，其中ELA涨幅最大，涨幅9.74%，暂报56.4美元；VERI跌幅最大，跌幅13.45%，暂报112.14美元。主流币中仅BCH表现为涨，暂报1724美元，涨幅3.58%。","down_counts":25,"readings":[],"up_counts":12,"grade":4,"id":26857,"link_name":"原文链接"},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525605133,"sort":"人物","content":"【helloEOS创始人梓岑：超越ETH，对EOS而言目标太小】helloEOS创始人梓岑在一场会议上表示，“我并不觉得ETH会成为EOS的对手，超越ETH这样的目标，对EOS来说显得太小。","down_counts":40,"readings":[],"up_counts":52,"grade":3,"id":26856,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525604409,"sort":"公告","content":"【GitHub活跃度排行榜：NULS、TRX维持第一、第二】据CryptoMiso数据，过去3个月内GitHub代码活跃度排名中，前三维持不变，分别为NULS、TRX和EOS。排行榜前十分别为NULS、TRX、EOS、ZRX、ZSC、MOT、RHOC、ZIL、AION、REN。在全部上线的362个币种中，BTC排名第31（下降6名），ETH排名第74（下降22名），ETC排名第55（下降1名），BCH排名第67（维持不变），XRP排名第114（上升4名），LTC排名第133（上升149名）。","down_counts":18,"readings":[],"up_counts":19,"grade":3,"id":26855,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525604365,"sort":"公告","content":"【Gartner调查发现：区块链技术全球采用率仅为1%】Gartner在其2018年对首席信息官（CIO）的调查中表示，尽管电信、保险和金融服务的高管们在计划采用去中心化的技术时表现出了强烈的热情，但全球信息公司信息管理人员对区块链技术的采用和兴趣仍然很低。在Gartner调查的CIO中，只有1%的人承认“在他们的组织中采用了任何类型的区块链”，而只有8%的人对区块链技术有短期计划或正在积极尝试区块链技术。","down_counts":19,"readings":[],"up_counts":10,"grade":4,"id":26854,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525602379,"sort":"公告","content":"【比特币全网未确认交易笔数再抬头 最高破6700】据最新数据，随着BTC价格回暖，比特币全网未确认交易笔数再次抬头，目前最高破6700，最低为4900左右。","down_counts":27,"readings":[],"up_counts":37,"grade":4,"id":26853,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525602308,"sort":"行情","content":"【BTC跌下9600美元】据火币Pro最新数据，BTC价格跌下9600美元，暂报9592.94美元，跌幅为3.46%。目前BTC全球均价为9599.44美元，跌幅为3.52%。总市值排名前10币种，仅BCH微涨1.69%，暂报1724.23美元；排名前100币种仅8个币种上涨，涨幅最大为SOC,涨幅21.96%。","down_counts":25,"readings":[],"up_counts":21,"grade":4,"id":26852,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525601965,"sort":"公告","content":"【NULS CUP国际区块链创新应用（DAPP）设计大赛启动仪式圆满成功】5月5日，由NULS主办的首个以区块链技术应用（DAPP）为主题的全球性大赛启动仪式圆满成功，本次大赛得到了教育部、工信部、中国计算机学会区块链专业委员会以及重庆市渝中区人民政府的大力指导，活动现场首创区块链奇葩说辩论环节引发激烈辩论，将现场氛围推向高点。据悉，本次大赛分为社会组和高校组，优秀DAPP应用将获得现金大奖、项目孵化服务以及200-1000万的投资机会。","down_counts":14,"readings":[],"up_counts":22,"grade":4,"id":26851,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525601897,"sort":"公告","content":"【Chaince宣布全面支持所有EOS的糖果空投】据金色财经合作媒体IMEOS报道，五月六日，在上海举行的2018全球石墨烯区块链开发者大会上，Chaince创始人兼CEO 吴子臻宣布Chaince将成为全球首家全面支持所有EOS主网糖果空投的交易平台，包括支持相关空投的接收，分发，充值和转账，并将进一步开放部分优质空投token的交易功能。用户无需复杂的操作，即可在Chaince平台账户享受持币空投权益。","down_counts":14,"readings":[],"up_counts":45,"grade":4,"id":26850,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525598069,"sort":"公告","content":"【以太坊企业联盟提醒每个人它仍然活跃，发布新的架构堆栈】自近18个月前成立以来，以太坊企业联盟一直比较低调。然而近日，企业以太坊联盟（EEA）正式公布了其企业Ethereum体系结构堆栈，作为其企业以太坊规范战略的下一部分。","down_counts":31,"readings":[],"up_counts":31,"grade":4,"id":26849,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597652,"sort":"公告","content":"【区块链将改变在线交互游戏行业】外媒称，在线交互游戏行业就是区块链技术相对集中应用的行业之一。区块链技术为这个行业提供了更好的技术支持，并有效地解决了诸如便捷，公平，声誉和信任等全球游戏行业共同面临的诸多棘手问题。借助这项技术，在线交互游戏行业将变得绝对的透明且诱惑人心。随机数生成程序和自动报告系统将不再由人来进行管理，而是通过加密可验证代码进行管理，这将大大提高信任级别，进而对在线交互游戏行业造成革命性的影响。 我们猜测未来区块链将为在线交互游戏行业带来如下变化。","down_counts":34,"readings":[],"up_counts":15,"grade":3,"id":26848,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"red","created_at":1525597590,"sort":"精选","content":"【人民创投：二三线城市在区块链上的布局早已起跑】人民创投近日刊文称，在当下国内这股区块链的浪潮中，相比北京、上海等一线城市政府的“冷静克制”，二三线城市在区块链上的布局，早已起跑。据不完全统计，国内共有贵州、浙江、江苏、广东、山东、福建、江西、内蒙古、重庆、成都、新疆等个十余个省、市、自治区就区块链发布了指导意见，多个省份甚至将区块链列入本省的“十三五”战略发展规划之中。","down_counts":29,"readings":[],"up_counts":60,"grade":5,"id":26847,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597439,"sort":"公告","content":"【移动通信公司MobileBridge推出区块链技术平台Momentum】今天，移动通信公司 MobileBridge宣布推出了其基于区块链技术的平台——Momentum。Momentum是一个专门针对消费者和特定品牌的以虚拟货币取代积分制的忠诚度项目。","down_counts":27,"readings":[],"up_counts":24,"grade":3,"id":26846,"link_name":""},{"images":[],"zan_status":"","link":"","highlight_color":"","created_at":1525597365,"sort":"公告","content":"【埃塞俄比亚联手虚拟货币创企Cardano，将区块链技术应用于农业】埃塞俄比亚是最新一个表示对区块链解决方案有兴趣的非洲国家。它和新兴虚拟货币创企Cardano签署了谅解备忘录，以培训区块链开发人员，将这种技术应用于当地的农业。今天早上，Cardano的领导Charles Hoskinson，也就是以太币的联合创始人，宣布这个倡议将专注于培训开发人员使用区块链。","down_counts":20,"readings":[],"up_counts":22,"grade":3,"id":26845,"link_name":""}]}
+2018-05-06 21:00:06,900 - Closing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 21:00:03 CST 2018]; root of context hierarchy
+2018-05-06 21:00:06,901 - Stopping beans in phase 2147483647
+2018-05-06 21:00:06,903 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 21:00:06,903 - Shutting down Quartz Scheduler
+2018-05-06 21:00:06,904 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2018-05-06 21:00:06,904 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 21:00:06,904 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2018-05-06 21:00:37,265 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 21:00:37,661 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 21:00:37,720 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-05-06 21:00:37,806 - Refreshing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 21:00:37 CST 2018]; root of context hierarchy
+2018-05-06 21:00:38,166 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 21:00:38,178 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 21:00:39,111 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,113 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,116 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,116 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,117 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,119 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,120 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,121 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,125 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 21:00:39,125 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:00:39,484 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-05-06 21:00:39,616 - Using default implementation for ThreadExecutor
+2018-05-06 21:00:39,735 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-05-06 21:00:39,735 - Quartz Scheduler v.2.3.0 created.
+2018-05-06 21:00:39,738 - RAMJobStore initialized.
+2018-05-06 21:00:39,740 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-05-06 21:00:39,740 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-05-06 21:00:39,740 - Quartz scheduler version: 2.3.0
+2018-05-06 21:00:39,743 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@6e005dc9
+2018-05-06 21:00:39,810 - Starting beans in phase 2147483647
+2018-05-06 21:00:39,810 - Starting Quartz Scheduler now
+2018-05-06 21:00:39,811 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-05-06 21:00:39,822 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5a3bc7ed] to prepare test instance [com.etyero.service.test.ValueTest@181e731e]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.etyero.service.test.ValueTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.etyero.action.Jinse com.etyero.service.test.ValueTest.proporties; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.action.Jinse] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:384)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:110)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.etyero.action.Jinse com.etyero.service.test.ValueTest.proporties; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.action.Jinse] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.action.Jinse] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 28 more
+2018-05-06 21:00:39,841 - Closing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 21:00:37 CST 2018]; root of context hierarchy
+2018-05-06 21:00:39,843 - Stopping beans in phase 2147483647
+2018-05-06 21:00:39,844 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 21:00:39,846 - Shutting down Quartz Scheduler
+2018-05-06 21:00:39,847 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2018-05-06 21:00:39,847 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 21:00:39,848 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2018-05-06 21:01:28,390 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 21:01:28,851 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 21:01:28,909 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-05-06 21:01:28,998 - Refreshing org.springframework.context.support.GenericApplicationContext@29774679: startup date [Sun May 06 21:01:28 CST 2018]; root of context hierarchy
+2018-05-06 21:01:29,309 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 21:01:29,326 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 21:01:30,137 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,139 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,140 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,141 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,144 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,146 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,147 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,150 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,154 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 21:01:30,155 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:01:30,519 - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-05-06 21:01:30,646 - Using default implementation for ThreadExecutor
+2018-05-06 21:01:30,678 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2018-05-06 21:01:30,678 - Quartz Scheduler v.2.3.0 created.
+2018-05-06 21:01:30,680 - RAMJobStore initialized.
+2018-05-06 21:01:30,681 - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2018-05-06 21:01:30,681 - Quartz scheduler 'org.springframework.scheduling.quartz.SchedulerFactoryBean#0' initialized from an externally provided properties instance.
+2018-05-06 21:01:30,682 - Quartz scheduler version: 2.3.0
+2018-05-06 21:01:30,776 - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@3081f72c
+2018-05-06 21:01:30,856 - Starting beans in phase 2147483647
+2018-05-06 21:01:30,856 - Starting Quartz Scheduler now
+2018-05-06 21:01:30,856 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED started.
+2018-05-06 21:01:30,872 - baseUrl----null
+2018-05-06 21:01:31,300 - Closing org.springframework.context.support.GenericApplicationContext@29774679: startup date [Sun May 06 21:01:28 CST 2018]; root of context hierarchy
+2018-05-06 21:01:31,301 - Stopping beans in phase 2147483647
+2018-05-06 21:01:31,302 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 21:01:31,303 - Shutting down Quartz Scheduler
+2018-05-06 21:01:31,303 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutting down.
+2018-05-06 21:01:31,304 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED paused.
+2018-05-06 21:01:31,304 - Scheduler org.springframework.scheduling.quartz.SchedulerFactoryBean#0_$_NON_CLUSTERED shutdown complete.
+2018-05-06 21:27:14,666 - Loading XML bean definitions from class path resource [spring-mvc.xml]
+2018-05-06 21:27:15,106 - Loading XML bean definitions from class path resource [quartz_data.xml]
+2018-05-06 21:27:15,156 - Loading XML bean definitions from class path resource [spring-mybatis.xml]
+2018-05-06 21:27:15,242 - Refreshing org.springframework.context.support.GenericApplicationContext@ae45eb6: startup date [Sun May 06 21:27:15 CST 2018]; root of context hierarchy
+2018-05-06 21:27:15,563 - Loading properties file from class path resource [dataSource.properties]
+2018-05-06 21:27:15,572 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-05-06 21:27:16,351 - Mapped "{[/access/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.AccessInfoController.Save(com.etyero.entity.AccessInfo,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,354 - Mapped "{[/cht/getChtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.CHTInfoController.getChtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,358 - Mapped "{[/dt/getDtInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtInfo(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,359 - Mapped "{[/dt/getDtDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.DTCakeLineController.getDtDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,360 - Mapped "{[/hxc/getHxcDayLine],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.HXCMonthLineController.getHxcDayLine(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,362 - Mapped "{[/news/getShortNews],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.NewsController.getShortNews(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,366 - Mapped "{[/rank/getRankInfo],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.RankInfoController.getRankInfo(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,368 - Mapped "{[/trade/getCashFlow],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.TradeInfoController.getCashFlow(java.lang.String,javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,371 - Mapped "{[/user/delete],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.etyero.controller.UserController.delete(com.etyero.entity.User,org.springframework.ui.Model)
+2018-05-06 21:27:16,372 - Mapped "{[/user/save],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.etyero.controller.UserController.Save(javax.servlet.http.HttpServletResponse)
+2018-05-06 21:27:16,724 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@27508c5d] to prepare test instance [com.etyero.service.test.ValueTest@4f704591]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:101)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:109)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:75)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:319)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:232)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:175)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'CHTInfoController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.etyero.action.ChtInfo com.etyero.controller.CHTInfoController.chtInfo; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.action.ChtInfo] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:292)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:700)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:121)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:100)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:250)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContextInternal(CacheAwareContextLoaderDelegate.java:64)
+	at org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:91)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.etyero.action.ChtInfo com.etyero.controller.CHTInfoController.chtInfo; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.action.ChtInfo] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:289)
+	... 41 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.etyero.action.ChtInfo] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:960)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:855)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:480)
+	... 43 more
