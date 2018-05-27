@@ -25,9 +25,9 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://120.78.170.218:3306/niuba_test?useUnicode=true&amp;characterEncoding=UTF-8" />
-		<property name="username" value="CHEN_test" />
-		<property name="password" value="CHEN_test%456" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/niuba_test?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="xxx" />
+		<property name="password" value="xxx" />
 		<!-- 初始化连接大小 -->
 		<property name="initialSize" value="0"></property>
 		<!-- 连接池最大数量 -->
